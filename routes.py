@@ -1,5 +1,5 @@
-from main import main
+from app import app
 
 @app.route("/")
 def home():
-    return "Welcome to the Student Marketplace!"
+    return "Hello from Decampus!"
