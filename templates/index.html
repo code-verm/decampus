@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decampus - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  </head>
+<body>
+    <header>
+        <h1>Decampus</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/books">Books</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to Decampus!</h2>
+        <p>Your one-stop platform for discovering and sharing books with fellow campus learners.</p>
+
+        {% if books %}
+        <h2>Featured Books</h2>
+        <ul>
+            {% for book in books %}
+            <li>{{ book.title }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </main>
+
+    <footer>
+        &copy; 2024 Decampus
+    </footer>
+</body>
+</html>
