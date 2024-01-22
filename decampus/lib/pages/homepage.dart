@@ -8,6 +8,7 @@ class homepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Decampus'),
+
       ),
       body: const Center(
         child: Column(

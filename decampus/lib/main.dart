@@ -1,15 +1,12 @@
+import 'package:decampus/pages/homepage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
-import 'loading_screen.dart';
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+
   runApp(const MyApp());
 }
 
@@ -19,11 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Decampus',
-      theme: ThemeData(
-        primarySwatch: Colors.blue, // Adjust as needed
-      ),
-      home: const LoadingScreen(), // Start with the loading screen
+      home: homepage()
+      ,debugShowCheckedModeBanner: false,
+
     );
+
   }
 }
